@@ -1,0 +1,19 @@
+<p>list works!</p>
+<a [routerLink]="'create'">Tạo mới</a>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Description</td>
+    <td colspan="2"></td>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.name}}</td>
+    <td>{{product.description}}</td>
+    <td>
+      <a [routerLink]="'edit/' + product.id">Sửa</a>
+    </td>
+    <td>
+      <a [routerLink]="'delete/' + product.id">Xóa</a>
+    </td>
+  </tr>
+</table>

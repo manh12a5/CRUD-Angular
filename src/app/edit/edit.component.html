@@ -1,0 +1,6 @@
+<p>edit works!</p>
+<form (ngSubmit)="save()">
+  <input type="text" name="name" [(ngModel)]="product.name">
+  <input type="text" name="description" [(ngModel)]="product.description">
+  <input type="submit" value="Edit"/>
+</form>
