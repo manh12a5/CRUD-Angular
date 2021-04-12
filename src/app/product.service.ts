@@ -34,7 +34,7 @@ export class ProductService {
 
   // tslint:disable-next-line:typedef
   save(id: number, product: IProduct) {
-    product = this.products[id - 1];
+   this.products[id - 1] = product;
   }
 
   // tslint:disable-next-line:typedef
@@ -44,7 +44,7 @@ export class ProductService {
 
   // tslint:disable-next-line:typedef
   delete(id: number) {
-    this.products.splice(id - 1);
+    this.products.splice(id - 1, 1);
   }
 
   constructor() { }
